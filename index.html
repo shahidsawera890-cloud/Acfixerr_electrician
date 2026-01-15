@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Fixer | Professional Electrical Repair Services in Riyadh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a4b8c;
+            --primary-dark: #0d2d5c;
+            --primary-light: #2d6bc4;
+            --secondary: #FFB81C;
+            --secondary-dark: #E5A00E;
+            --accent: #2A9D8F;
+            --light: #F8FAFC;
+            --dark: #1E293B;
+            --gray-light: #E2E8F0;
+            --gray-medium: #94A3B8;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-light));
+            --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(90deg, var(--secondary), #ff9800);
+            color: white;
+            padding: 12px 5%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1002;
+        }
+        
+        .emergency-banner i {
+            margin-right: 8px;
+        }
+        
+        /* Top Contact Bar */
+        .top-bar {
+            background: var(--gradient-primary);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .contact-top {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-top a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            object-fit: contain;
+            box-shadow: 0 4px 12px rgba(26, 75, 140, 0.3);
+        }
+        
+        .logo-text h1 {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .logo-text p {
+            color: var(--secondary);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .call-now-btn {
+            background: var(--gradient-secondary);
+            color: var(--dark);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(255, 184, 28, 0.3);
+            font-size: 15px;
+        }
+        
+        .call-now-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 184, 28, 0.4);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        /* Hero Section - Updated Background */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 140, 0.85), rgba(13, 45, 92, 0.9)), url('https://chillmech.co.uk/wp-content/uploads/2023/12/image-1-e1731939201885.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-tag {
+            display: inline-block;
+            background: var(--gradient-secondary);
+            color: var(--dark);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(255, 184, 28, 0.4);
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .hero h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        .highlight {
+            color: var(--secondary);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #1DA851);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            transition: var(--transition);
+            margin-top: 20px;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(37, 211, 102, 0.4);
+        }
+        
+        .guarantee-badge {
+            background: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 6px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(42, 157, 143, 0.3);
+        }
+        
+        .guarantee-badge i {
+            font-size: 16px;
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 60px 5%;
+            background: white;
+            position: relative;
+            margin-top: -40px;
+            z-index: 2;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px 15px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-text {
+            font-size: 16px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        /* Professional Badges */
+        .professional-badges {
+            padding: 60px 5%;
+            background: white;
+            text-align: center;
+        }
+        
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 30px auto 0;
+        }
+        
+        .certification-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin: 5px;
+        }
+        
+        .certification-badge i {
+            color: var(--secondary);
+            font-size: 18px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .section-title p {
+            color: var(--gray-medium);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-icon {
+            background: var(--gradient-primary);
+            color: white;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Appliance Repair Section */
+        .appliance-repair {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        .appliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+        
+        .appliance-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .appliance-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .appliance-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .appliance-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .appliance-card:hover .appliance-image img {
+            transform: scale(1.05);
+        }
+        
+        .appliance-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .appliance-content h3 {
+            color: var(--primary);
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        /* Gallery Section */
+        .professional-gallery {
+            padding: 80px 5%;
+            background: var(--light);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 220px;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Testimonials Section - Single Review Slider */
+        .testimonials {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        .testimonials-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto 0;
+            overflow: hidden;
+        }
+        
+        .testimonial-slides-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+            height: 100%;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .testimonial-info h4 {
+            color: var(--dark);
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+        
+        .testimonial-info .date {
+            color: var(--gray-medium);
+            font-size: 13px;
+        }
+        
+        .testimonial-rating {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .testimonial-text {
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+            font-size: 15px;
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .slider-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .slider-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .slider-dots {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .slider-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 5%;
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        .contact .section-title h2 {
+            color: white;
+        }
+        
+        .contact .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h3 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .contact-details {
+            margin-top: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .contact-icon {
+            background: var(--gradient-secondary);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(255, 184, 28, 0.3);
+        }
+        
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--gray-light);
+            border-radius: 10px;
+            background-color: white;
+            font-size: 16px;
+            transition: var(--transition);
+            color: var(--dark);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 75, 140, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 60px 5% 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-column h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 16px;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero h3 {
+                font-size: 22px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            nav ul {
+                gap: 20px;
+            }
+            
+            .hero h2 {
+                font-size: 28px;
+            }
+            
+            .hero h3 {
+                font-size: 20px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .appliance-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 120px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: var(--shadow-lg);
+                padding: 20px;
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .hero {
+                padding: 60px 5%;
+                min-height: 75vh;
+            }
+            
+            .hero h2 {
+                font-size: 24px;
+            }
+            
+            .hero h3 {
+                font-size: 18px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title h2 {
+                font-size: 24px;
+            }
+            
+            .stat-number {
+                font-size: 32px;
+            }
+            
+            .top-bar {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+                padding: 12px 5%;
+            }
+            
+            .contact-top {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .stats {
+                margin-top: -30px;
+                padding: 40px 5%;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .appliance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .badges-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .header-container {
+                padding: 12px 5%;
+            }
+            
+            .logo-text h1 {
+                font-size: 22px;
+            }
+            
+            .hero {
+                padding: 50px 5%;
+            }
+            
+            .hero h2 {
+                font-size: 22px;
+            }
+            
+            .hero h3 {
+                font-size: 18px;
+            }
+            
+            .call-now-btn, .whatsapp-btn {
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 22px;
+            }
+            
+            .stat-item {
+                padding: 15px 10px;
+            }
+            
+            .stat-number {
+                font-size: 28px;
+            }
+            
+            .testimonial-card {
+                padding: 20px;
+            }
+            
+            .testimonial-avatar {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero h2 {
+                font-size: 20px;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+        }
+        
+        /* Translate Button */
+        .translate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--gradient-primary);
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .translate-btn:hover {
+            transform: scale(1.1);
+            background: var(--primary-light);
+        }
+        
+        .translate-panel {
+            position: fixed;
+            bottom: 85px;
+            right: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            padding: 15px;
+            width: 180px;
+            z-index: 1000;
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .translate-panel.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .translate-panel h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .translate-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 6px;
+        }
+        
+        .translate-option:hover {
+            background-color: var(--light);
+        }
+        
+        .translate-option.active {
+            background-color: var(--light);
+            border-left: 3px solid var(--primary);
+        }
+        
+        /* Review Count Badge */
+        .review-count {
+            display: inline-block;
+            background: var(--gradient-secondary);
+            color: var(--dark);
+            padding: 6px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            margin-top: 10px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(255, 184, 28, 0.3);
+        }
+
+        /* AC Fixer Logo Styles */
+        .logo-img-container {
+            position: relative;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body dir="ltr">
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <i class="fas fa-exclamation-triangle"></i> 24/7 EMERGENCY REPAIR SERVICES | CALL NOW: +966 53 416 3497
+    </div>
+    
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="contact-top">
+            <a href="tel:+966534163497">
+                <i class="fas fa-phone-alt"></i> +966 53 416 3497
+            </a>
+            <a href="mailto:mj2527462@gmail.com">
+                <i class="fas fa-envelope"></i> mj2527462@gmail.com
+            </a>
+            <span><i class="fas fa-clock"></i> Open 24/7</span>
+        </div>
+    </div>
+    
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <!-- AC Fixer Logo - SVG-based logo -->
+                <div class="logo-img-container">
+                    <svg width="50" height="50" viewBox="0 0 100 100" class="logo-img">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a4b8c;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2d6bc4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="100" height="100" rx="15" fill="url(#logoGradient)"/>
+                        <text x="50" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">AC</text>
+                        <text x="50" y="65" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#FFB81C">Fixer</text>
+                        <circle cx="80" cy="20" r="8" fill="#FFB81C">
+                            <animate attributeName="r" values="8;6;8" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>AC Fixer</h1>
+                    <p>CERTIFIED ELECTRICAL REPAIRS</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#" data-key="home">Home</a></li>
+                    <li><a href="#" data-key="services">Repair Services</a></li>
+                    <li><a href="#" data-key="gallery">Our Work</a></li>
+                    <li><a href="#" data-key="testimonials">Reviews</a></li>
+                    <li><a href="#" data-key="contact">Contact</a></li>
+                    <li><a href="tel:+966534163497" class="call-now-btn">
+                        <i class="fas fa-phone-alt"></i> <span data-key="callNow">CALL NOW</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section with Updated Background -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag" data-key="fastest">Electrical Repair Experts in Riyadh</span>
+            <h2 data-key="heroTitle">Professional Electrical <span class="highlight">Repair Services</span> – Guaranteed Quality</h2>
+            <h3 data-key="heroSubtitle">Emergency Repairs Since 2009 | 500+ Satisfied Customers</h3>
+            <p data-key="heroDesc">AC Fixer provides certified electrical repair solutions for homes and businesses across Riyadh. Our licensed electricians specialize in fixing electrical problems quickly and safely. From emergency repairs to scheduled maintenance, we deliver reliable service with every job.</p>
+            
+            <!-- Updated Guarantee Badges - Changed "No Fix, No Fee" to "First-Time Fix Guarantee" -->
+            <div style="margin-top: 25px;">
+                <span class="guarantee-badge"><i class="fas fa-medal"></i> Quality Work Guarantee</span>
+                <span class="guarantee-badge"><i class="fas fa-check-circle"></i> First-Time Fix Guarantee</span>
+                <span class="guarantee-badge"><i class="fas fa-bolt"></i> 60-Minute Response Time</span>
+            </div>
+            
+            <div style="margin-top: 35px;">
+                <a href="https://wa.me/966534163497" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> <span data-key="whatsapp">Get Repair Quote</span>
+                </a>
+                <a href="tel:+966534163497" class="call-now-btn" style="margin-left: 15px;">
+                    <i class="fas fa-phone-alt"></i> Emergency Repair
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-key="stat1">15+</div>
+                <div class="stat-text" data-key="stat1Text">Years Repair Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-key="stat2">500+</div>
+                <div class="stat-text" data-key="stat2Text">Repairs Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-key="stat3">24/7</div>
+                <div class="stat-text" data-key="stat3Text">Emergency Repair</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-key="stat4">100%</div>
+                <div class="stat-text" data-key="stat4Text">Repair Guarantee</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Professional Badges -->
+    <section class="professional-badges">
+        <div class="section-title">
+            <h2>Why Choose AC Fixer?</h2>
+            <p>Professional electrical repair services you can trust</p>
+        </div>
+        <div class="badges-container">
+            <div class="certification-badge">
+                <i class="fas fa-user-check"></i>
+                <span>Licensed & Insured</span>
+            </div>
+            <div class="certification-badge">
+                <i class="fas fa-award"></i>
+                <span>Expert Technicians</span>
+            </div>
+            <div class="certification-badge">
+                <i class="fas fa-tools"></i>
+                <span>Latest Diagnostic Tools</span>
+            </div>
+            <div class="certification-badge">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Transparent Pricing</span>
+            </div>
+            <div class="certification-badge">
+                <i class="fas fa-clock"></i>
+                <span>On-Time Guarantee</span>
+            </div>
+            <div class="certification-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Safety First Approach</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-title">
+            <h2 data-key="servicesTitle">Our Electrical Repair Services</h2>
+            <p data-key="servicesDesc">Expert repair services by certified electricians</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Residential Electrical Repair</h3>
+                    <p>Expert repair of home electrical systems including wiring, circuit breakers, outlets, lighting fixtures, and switchboard issues. We fix electrical problems in homes quickly and safely.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="guarantee-badge">Same Day Repair</span>
+                        <span class="guarantee-badge">Safety Certified</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Commercial Electrical Repair</h3>
+                    <p>Professional repair services for offices, shops, and commercial buildings. We fix electrical faults, power issues, and lighting problems with minimal disruption to your business operations.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="guarantee-badge">Business Repair</span>
+                        <span class="guarantee-badge">Fast Service</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <div class="service-content">
+                    <h3>AC Repair & Maintenance</h3>
+                    <p>Expert AC repair and maintenance services. We fix cooling problems, electrical issues, compressor failures, and thermostat malfunctions for all AC brands and models.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="guarantee-badge">All Brands</span>
+                        <span class="guarantee-badge">AC Certified</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Emergency Electrical Repair</h3>
+                    <p>24/7 emergency electrical repair services for urgent issues including power failures, circuit breaker problems, sparking outlets, and dangerous electrical faults requiring immediate attention.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="guarantee-badge">24/7 Service</span>
+                        <span class="guarantee-badge">Quick Response</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Appliance Repair Section - ALL CONTENT IMAGES KEPT AS ORIGINAL -->
+    <section class="appliance-repair">
+        <div class="section-title">
+            <h2>Professional Appliance Repair Services</h2>
+            <p>Our certified technicians specialize in repairing all major electrical appliances</p>
+        </div>
+        
+        <div class="appliance-grid">
+            <div class="appliance-card">
+                <div class="appliance-image">
+                    <img src="https://www.fixdar.com/wp-content/uploads/2025/04/ac-repair-professional.jpg" alt="Professional AC Technician">
+                </div>
+                <div class="appliance-content">
+                    <h3>Air Conditioner Repair</h3>
+                    <p>Expert AC repair services for all brands. Fix cooling issues, electrical problems, and compressor failures with warranty on all repairs.</p>
+                    <div style="margin-top: 10px;">
+                        <span class="guarantee-badge">All Brands</span>
+                        <span class="guarantee-badge">Fast Service</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="appliance-card">
+                <div class="appliance-image">
+                    <img src="https://t3.ftcdn.net/jpg/04/23/35/16/360_F_423351639_qcIVh5khAZrpTdIHakM5n8G6wtgFIA7y.jpg" alt="Professional Washing Machine Service">
+                </div>
+                <div class="appliance-content">
+                    <h3>Washing Machine Repair</h3>
+                    <p>Professional washing machine repair services. Fix drainage problems, spinning issues, and electrical faults efficiently.</p>
+                    <div style="margin-top: 10px;">
+                        <span class="guarantee-badge">Same Day</span>
+                        <span class="guarantee-badge">Quality Parts</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="appliance-card">
+                <div class="appliance-image">
+                    <img src="https://media.istockphoto.com/id/1128872850/photo/repairman-fixing-refrigerator-with-screwdriver.jpg?s=612x612&w=0&k=20&c=F6fgkzj1e_2x-diaozUqVhHuN967oY5bmlbaO5kD5Xk=" alt="Professional Fridge Repair">
+                </div>
+                <div class="appliance-content">
+                    <h3>Refrigerator Repair</h3>
+                    <p>Expert fridge and freezer repair services. Fix cooling issues, leaks, and electrical problems with guaranteed quality service.</p>
+                    <div style="margin-top: 10px;">
+                        <span class="guarantee-badge">Cooling Issues</span>
+                        <span class="guarantee-badge">Leak Repair</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="appliance-card">
+                <div class="appliance-image">
+                    <img src="https://thumbs.dreamstime.com/b/cropped-image-serviceman-working-fridge-screwdriver-cropped-image-serviceman-working-fridge-screwdriver-271618014.jpg" alt="Professional Water Heater Service">
+                </div>
+                <div class="appliance-content">
+                    <h3>Water Heater Repair</h3>
+                    <p>Expert water heater repair and maintenance services. Fix heating issues, leaks, and electrical problems efficiently.</p>
+                    <div style="margin-top: 10px;">
+                        <span class="guarantee-badge">Heating Issues</span>
+                        <span class="guarantee-badge">Leak Repair</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Professional Gallery Section - ALL CONTENT IMAGES KEPT AS ORIGINAL -->
+    <section class="professional-gallery">
+        <div class="section-title">
+            <h2>Our Electrical Repair Work</h2>
+            <p>Quality electrical repairs by our certified technicians</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://www.fixdar.com/wp-content/uploads/2025/04/ac-repair-professional.jpg" alt="AC Repair Services">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://www.jdsplumbingservice.com/wp-content/uploads/2023/03/broken-float-switch-jpg.webp" alt="AC Unit Repair">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://thumbs.dreamstime.com/b/cropped-image-serviceman-working-fridge-screwdriver-cropped-image-serviceman-working-fridge-screwdriver-271618014.jpg" alt="Appliance Fridge Repair">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://thumbs.dreamstime.com/b/electrician-technician-working-to-repair-refrigerator-electrician-technician-working-to-repair-refrigerator-fridge-appliance-269552496.jpg" alt="Refrigerator Service">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>What Our Customers Say</h2>
+            <p>Read feedback from satisfied customers who trust our repair services</p>
+            <div class="review-count">40+ Customer Reviews</div>
+        </div>
+        
+        <div class="testimonials-slider">
+            <div class="testimonial-slides-container" id="testimonialSlidesContainer">
+                <!-- Testimonials will be dynamically added here -->
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="slider-dots" id="sliderDots">
+                    <!-- Dots will be generated dynamically -->
+                </div>
+                
+                <button class="slider-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="section-title">
+            <h2 data-key="contactTitle">Contact Us Now</h2>
+            <p data-key="contactDesc">Available 24/7 for all your electrical repair emergencies</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Our team of certified electricians is ready to repair any electrical issue quickly and safely. We pride ourselves on prompt response times and quality workmanship.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Emergency Repair Hotline</h4>
+                            <p>+966 53 416 3497</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp Repair Service</h4>
+                            <p>+966 53 416 3497</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>mj2527462@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Repair Service Hours</h4>
+                            <p>24/7 Emergency Repair Available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Service Area</h4>
+                            <p>Serving all areas of Riyadh, Saudi Arabia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Request Repair Service</h3>
+                <form id="serviceForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Repair Type</option>
+                            <option value="Electrical Repair">Electrical System Repair</option>
+                            <option value="AC Repair">AC Repair</option>
+                            <option value="Appliance Repair">Appliance Repair</option>
+                            <option value="Emergency">Emergency Electrical Repair</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Describe the electrical problem" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="call-now-btn" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-wrench"></i> Request Repair Service
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>AC Fixer</h3>
+                <p>Providing fast, reliable, and safe electrical repair services throughout Riyadh with 24/7 emergency response. Certified and licensed electricians for all your repair needs.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/966534163497" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Repair Services</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Our Work</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Our Repair Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-bolt"></i> Electrical System Repair</a></li>
+                    <li><a href="#"><i class="fas fa-snowflake"></i> AC Repair</a></li>
+                    <li><a href="#"><i class="fas fa-tv"></i> Appliance Repair</a></li>
+                    <li><a href="#"><i class="fas fa-wrench"></i> Maintenance</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Emergency Repair</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:+966534163497"><i class="fas fa-phone-alt"></i> +966 53 416 3497</a></li>
+                    <li><a href="https://wa.me/966534163497" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Repair</a></li>
+                    <li><a href="mailto:mj2527462@gmail.com"><i class="fas fa-envelope"></i> mj2527462@gmail.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Riyadh, Saudi Arabia</li>
+                    <li><i class="fas fa-clock"></i> 24/7 Emergency Repair</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; <span id="currentYear"></span> AC Fixer Electrical Repair Services. All rights reserved. | Licensed & Insured Electrical Contractor</p>
+            <p style="margin-top: 8px; font-size: 13px;">Serving Riyadh Since 2009</p>
+        </div>
+    </footer>
+    
+    <!-- Translate Button -->
+    <button class="translate-btn" id="translateBtn">
+        <i class="fas fa-language"></i>
+    </button>
+    
+    <div class="translate-panel" id="translatePanel">
+        <h4>Choose Language</h4>
+        <div class="translate-option active" data-lang="en">
+            <div class="translate-flag flag-en"></div>
+            <span>English</span>
+        </div>
+        <div class="translate-option" data-lang="ar">
+            <div class="translate-flag flag-ar"></div>
+            <span>العربية</span>
+        </div>
+        <div class="translate-option" data-lang="ur">
+            <div class="translate-flag flag-ur"></div>
+            <span>اردو</span>
+        </div>
+    </div>
+    
+    <script>
+        // Multi-language content - Updated for repair focus
+        const translations = {
+            en: {
+                // Navigation
+                home: "Home",
+                services: "Repair Services",
+                gallery: "Our Work",
+                testimonials: "Reviews",
+                contact: "Contact",
+                callNow: "CALL NOW",
+                
+                // Hero section
+                fastest: "Electrical Repair Experts in Riyadh",
+                heroTitle: "Professional Electrical <span class='highlight'>Repair Services</span> – Guaranteed Quality",
+                heroSubtitle: "Emergency Repairs Since 2009 | 500+ Satisfied Customers",
+                heroDesc: "AC Fixer provides certified electrical repair solutions for homes and businesses across Riyadh. Our licensed electricians specialize in fixing electrical problems quickly and safely. From emergency repairs to scheduled maintenance, we deliver reliable service with every job.",
+                whatsapp: "Get Repair Quote",
+                
+                // Stats
+                stat1: "15+",
+                stat1Text: "Years Repair Experience",
+                stat2: "500+",
+                stat2Text: "Repairs Completed",
+                stat3: "24/7",
+                stat3Text: "Emergency Repair",
+                stat4: "100%",
+                stat4Text: "Repair Guarantee",
+                
+                // Services
+                servicesTitle: "Our Electrical Repair Services",
+                servicesDesc: "Expert repair services by certified electricians",
+                
+                // Contact
+                contactTitle: "Contact Us Now",
+                contactDesc: "Available 24/7 for all your electrical repair emergencies"
+            },
+            
+            ar: {
+                // Navigation
+                home: "الرئيسية",
+                services: "خدمات الإصلاح",
+                gallery: "أعمالنا",
+                testimonials: "التقييمات",
+                contact: "اتصل بنا",
+                callNow: "اتصل الآن",
+                
+                // Hero section
+                fastest: "خبراء إصلاح الكهرباء في الرياض",
+                heroTitle: "خدمات إصلاح كهربائية محترفة – <span class='highlight'>جودة مضمونة</span>",
+                heroSubtitle: "إصلاحات طارئة منذ 2009 | 500+ عميل راضٍ",
+                heroDesc: "يقدم AC Fixer حلول إصلاح كهربائية معتمدة للمنازل والشركات في جميع أنحاء الرياض. كهرباؤنا المرخصون متخصصون في إصلاح المشاكل الكهربائية بسرعة وأمان. من الإصلاحات الطارئة إلى الصيانة المجدولة، نقدم خدمة موثوقة في كل عمل.",
+                whatsapp: "احصل على عرض إصلاح",
+                
+                // Stats
+                stat1: "١٥+",
+                stat1Text: "سنوات خبرة في الإصلاح",
+                stat2: "٥٠٠+",
+                stat2Text: "إصلاحات مكتملة",
+                stat3: "٢٤/٧",
+                stat3Text: "إصلاح طارئ",
+                stat4: "١٠٠٪",
+                stat4Text: "ضمان الإصلاح",
+                
+                // Services
+                servicesTitle: "خدمات الإصلاح الكهربائي لدينا",
+                servicesDesc: "خدمات إصلاح متخصصة من كهربائيين معتمدين",
+                
+                // Contact
+                contactTitle: "اتصل بنا الآن",
+                contactDesc: "متاحون على مدار 24/7 لجميع حالات الطوارئ الكهربائية"
+            },
+            
+            ur: {
+                // Navigation
+                home: "ہوم",
+                services: "مرمت کی خدمات",
+                gallery: "ہمارا کام",
+                testimonials: "جائزے",
+                contact: "رابطہ کریں",
+                callNow: "ابھی کال کریں",
+                
+                // Hero section
+                fastest: "ریاض میں الیکٹریکل مرمت کے ماہر",
+                heroTitle: "پروفیشنل الیکٹریکل <span class='highlight'>مرمت کی خدمات</span> – گارنٹیڈ کوالٹی",
+                heroSubtitle: "2009 سے ایمرجنسی مرمتیں | 500+ سے زیادہ مطمئن صارفین",
+                heroDesc: "AC Fixer ریاض بھر کے گھروں اور کاروباروں کے لیے سرٹیفائیڈ الیکٹریکل مرمت کے حل فراہم کرتا ہے۔ ہمارے لائسنس یافتہ الیکٹریشن بجلی کے مسائل کو جلدی اور محفوظ طریقے سے ٹھیک کرنے میں مہارت رکھتے ہیں۔ ایمرجنسی مرمتوں سے لے کر شیڈول شدہ دیکھ بھال تک، ہر کام میں ہم قابل اعتماد خدمات فراہم کرتے ہیں۔",
+                whatsapp: "مرمت کا کوٹ حاصل کریں",
+                
+                // Stats
+                stat1: "١٥+",
+                stat1Text: "سالوں کی مرمت کا تجربہ",
+                stat2: "٥٠٠+",
+                stat2Text: "مرمتیں مکمل",
+                stat3: "٢٤/٧",
+                stat3Text: "ہنگامی مرمت",
+                stat4: "١٠٠٪",
+                stat4Text: "مرمت کی ضمانت",
+                
+                // Services
+                servicesTitle: "ہماری الیکٹریکل مرمت کی خدمات",
+                servicesDesc: "سرٹیفائیڈ الیکٹریشن کے ذریعے ماہر مرمت کی خدمات",
+                
+                // Contact
+                contactTitle: "ابھی رابطہ کریں",
+                contactDesc: "آپ کی تمام بجلی کی ہنگامی مرمت کے لیے 24/7 دستیاب"
+            }
+        };
+        
+        // Set current language
+        let currentLang = 'en';
+        
+        // DOM elements
+        const translateBtn = document.getElementById('translateBtn');
+        const translatePanel = document.getElementById('translatePanel');
+        const translateOptions = document.querySelectorAll('.translate-option');
+        const elementsToTranslate = document.querySelectorAll('[data-key]');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const body = document.body;
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Toggle translate panel
+        translateBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            translatePanel.classList.toggle('active');
+        });
+        
+        // Close translate panel when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!translatePanel.contains(e.target) && !translateBtn.contains(e.target)) {
+                translatePanel.classList.remove('active');
+            }
+        });
+        
+        // Language switching functionality
+        translateOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Update active option
+                translateOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+                // Set new language
+                currentLang = option.getAttribute('data-lang');
+                
+                // Update text direction
+                if (currentLang === 'ar') {
+                    body.setAttribute('dir', 'rtl');
+                } else if (currentLang === 'ur') {
+                    body.setAttribute('dir', 'rtl');
+                    body.classList.add('urdu-font');
+                } else {
+                    body.setAttribute('dir', 'ltr');
+                    body.classList.remove('urdu-font');
+                }
+                
+                // Translate all elements
+                translatePage();
+                
+                // Close panel
+                translatePanel.classList.remove('active');
+            });
+        });
+        
+        // Translate page content
+        function translatePage() {
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'OPTION') {
+                        element.setAttribute('placeholder', translations[currentLang][key]);
+                        if (element.tagName === 'OPTION' && element.value === '') {
+                            element.textContent = translations[currentLang][key];
+                        }
+                    } else {
+                        element.innerHTML = translations[currentLang][key];
+                    }
+                }
+            });
+        }
+        
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            
+            // Change icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Form submission - Service Request
+        document.getElementById('serviceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = this.querySelector('input[type="text"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const service = this.querySelector('select').value;
+            
+            // Show success message
+            let message;
+            if (currentLang === 'en') {
+                message = `Thank you ${name}! Your ${service} request has been submitted. Our electrician will contact you within 15 minutes.`;
+            } else if (currentLang === 'ar') {
+                message = `شكرًا ${name}! تم تقديم طلب ${service} الخاص بك. سوف يتصل بك كهربائنا خلال 15 دقيقة.`;
+            } else {
+                message = `شکریہ ${name}! آپ کی ${service} کی درخواست جمع کرادی گئی ہے۔ ہمارا الیکٹریشن 15 منٹ کے اندر آپ سے رابطہ کریں گے۔`;
+            }
+            
+            alert(message);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Testimonials Slider Functionality - Single Review
+        let currentSlide = 0;
+        const testimonialSlidesContainer = document.getElementById('testimonialSlidesContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const sliderDots = document.getElementById('sliderDots');
+        
+        // Sample testimonials - 40+ customer reviews
+        const sampleTestimonials = [
+            {
+                name: "Ahmed R.",
+                date: "2024-03-15",
+                rating: 5,
+                text: "Excellent repair service! The electrician arrived within 30 minutes and fixed my AC electrical issue. Highly recommended professional team!"
+            },
+            {
+                name: "Sara M.",
+                date: "2024-03-10",
+                rating: 5,
+                text: "Fixed all the electrical wiring problems in my old house. They diagnosed the issues correctly and repaired everything efficiently. Highly recommended for electrical repairs!"
+            },
+            {
+                name: "Mohammed A.",
+                date: "2024-03-05",
+                rating: 5,
+                text: "24/7 emergency repair saved us! Our circuit breaker kept tripping at midnight. They came immediately and fixed the electrical fault. Professional and efficient service!"
+            },
+            {
+                name: "Fatima K.",
+                date: "2024-02-28",
+                rating: 4,
+                text: "Good repair service at reasonable prices. Fixed my kitchen electrical issues in less than an hour. Reliable and honest electricians who know their work."
+            },
+            {
+                name: "Omar S.",
+                date: "2024-02-20",
+                rating: 5,
+                text: "Repaired my faulty electrical panel that other electricians couldn't fix. Very professional team with the right tools and knowledge. Excellent repair work!"
+            },
+            {
+                name: "Layla H.",
+                date: "2024-02-15",
+                rating: 5,
+                text: "The technician was knowledgeable and explained everything clearly. Fixed my AC compressor perfectly with warranty. Will definitely call again for any electrical issues."
+            },
+            {
+                name: "Khalid M.",
+                date: "2024-02-10",
+                rating: 5,
+                text: "Fast response time. Fixed my office electrical panel on a weekend. Saved our business from major downtime! Professional repair service."
+            },
+            {
+                name: "Noura A.",
+                date: "2024-02-05",
+                rating: 4,
+                text: "Reliable repair service. Came exactly at the scheduled time and completed the work efficiently. Good communication and fair pricing."
+            },
+            {
+                name: "Abdullah R.",
+                date: "2024-01-30",
+                rating: 5,
+                text: "Best electricians in Riyadh for repairs! They handle both small electrical fixes and major repairs with equal expertise. Highly recommended!"
+            },
+            {
+                name: "Maha S.",
+                date: "2024-01-25",
+                rating: 5,
+                text: "Fixed all the electrical issues in my new apartment. Clean work and reasonable pricing. Highly recommended for any electrical repair needs!"
+            }
+        ];
+        
+        // Initialize testimonials
+        function initializeTestimonials() {
+            testimonialSlidesContainer.innerHTML = '';
+            sampleTestimonials.forEach((testimonial, index) => {
+                addTestimonialToDOM(testimonial, index);
+            });
+            
+            // Create slider dots
+            createSliderDots();
+            updateSlider();
+        }
+        
+        // Add testimonial to DOM
+        function addTestimonialToDOM(testimonial, index) {
+            const testimonialSlide = document.createElement('div');
+            testimonialSlide.className = 'testimonial-slide';
+            testimonialSlide.dataset.index = index;
+            
+            const stars = '★'.repeat(testimonial.rating) + '☆'.repeat(5 - testimonial.rating);
+            
+            testimonialSlide.innerHTML = `
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">${testimonial.name.charAt(0)}</div>
+                        <div class="testimonial-info">
+                            <h4>${testimonial.name}</h4>
+                            <div class="date">${testimonial.date}</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">${stars}</div>
+                    <p class="testimonial-text">${testimonial.text}</p>
+                </div>
+            `;
+            
+            testimonialSlidesContainer.appendChild(testimonialSlide);
+        }
+        
+        // Create slider dots
+        function createSliderDots() {
+            sliderDots.innerHTML = '';
+            
+            sampleTestimonials.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'slider-dot';
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlider();
+                });
+                sliderDots.appendChild(dot);
+            });
+        }
+        
+        // Update slider position
+        function updateSlider() {
+            const translateX = -currentSlide * 100;
+            testimonialSlidesContainer.style.transform = `translateX(${translateX}%)`;
+            
+            // Update active dot
+            document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            
+            // Update button states
+            const totalSlides = sampleTestimonials.length;
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+        
+        // Slider navigation
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            const totalSlides = sampleTestimonials.length;
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlider();
+            }
+        });
+        
+        // Auto slide every 5 seconds
+        let slideInterval = setInterval(() => {
+            const totalSlides = sampleTestimonials.length;
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }, 5000);
+        
+        // Pause auto-slide on hover
+        testimonialSlidesContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        testimonialSlidesContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                const totalSlides = sampleTestimonials.length;
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }, 5000);
+        });
+        
+        // Initialize the page
+        function initializePage() {
+            translatePage();
+            initializeTestimonials();
+            
+            // Update testimonials count in the section
+            const testimonialsCount = sampleTestimonials.length;
+            document.querySelector('.testimonials .section-title p').textContent = 
+                `Read feedback from ${testimonialsCount}+ satisfied customers who trust our repair services`;
+            document.querySelector('.review-count').textContent = `${testimonialsCount}+ Customer Reviews`;
+        }
+        
+        // Initialize the page when loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
